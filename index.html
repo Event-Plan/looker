@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LookerDay'e Hoş Geldiniz</title>
+    
+    <meta name="description" content="LookerDay'e hoş geldiniz. Uygulamalarımızı indirin, sosyal medya hesaplarımızı takip edin ve iletişimde kalın.">
+    <meta name="keywords" content="LookerDay, planlama, uygulama, iletişim, app store, google play">
+
+    <link rel="icon" href="https://www.lookerday.com/LookerDay.png" type="image/png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LookerDay'e Hoş Geldiniz">
+    <meta property="og:description" content="Daha planlı bir yaşam için uygulamalarımızı keşfedin.">
+    <meta property="og:image" content="https://www.lookerday.com/LookerDay.png">
+    <meta property="og:url" content="https://www.lookerday.com">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "LookerDay",
+      "url": "https://www.lookerday.com",
+      "logo": "https://www.lookerday.com/LookerDay.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "support@lookerday.com",
+        "contactType": "customer support"
+      },
+      "sameAs": [
+        "https://instagram.com/looker_day",
+        "https://linkedin.com/company/lookerday"
+      ]
+    }
+    </script>
+
+    <style>
+        /* --- GENEL AYARLAR --- */
+        :root {
+            --ana-renk: #0e2a47;
+            --ikincil-renk: #f8f9fa;
+            --metin-renk: #333333;
+            --beyaz: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: var(--ana-renk);
+            color: var(--metin-renk);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- ANA KART TASARIMI --- */
+        .container {
+            background-color: var(--beyaz);
+            width: 90%;
+            max-width: 480px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px 30px;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .logo-wrapper {
+            margin-bottom: 25px;
+        }
+
+        .logo-placeholder {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-placeholder img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 16px rgba(14, 42, 71, 0.15));
+            border-radius: 24px;
+        }
+
+        h1 {
+            color: var(--ana-renk);
+            font-size: 26px;
+            margin-bottom: 12px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        p.description {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            font-size: 15px;
+            padding: 0 10px;
+        }
+
+        /* --- LİNK BUTONLARI IZGARASI --- */
+        .links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .link-card {
+            text-decoration: none;
+            background-color: var(--ikincil-renk);
+            padding: 18px 15px;
+            border-radius: 16px;
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #eee;
+        }
+
+        .link-card:hover {
+            background-color: #fff;
+            border-color: var(--ana-renk);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .link-card img {
+            width: 36px;
+            height: 36px;
+            margin-bottom: 10px;
+            object-fit: contain;
+        }
+
+        .link-card span {
+            color: var(--ana-renk);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* --- ALT BİLGİ --- */
+        .footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #999;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 25px;
+        }
+
+        .support-link {
+            margin-bottom: 15px;
+            color: #666;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .support-link a {
+            color: var(--ana-renk);
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 1px dotted var(--ana-renk);
+        }
+        .support-link a:hover {
+             border-bottom-style: solid;
+        }
+
+        .print-btn {
+            background: none;
+            border: none;
+            color: #aaa;
+            cursor: pointer;
+            font-size: 12px;
+            margin-top: 12px;
+            display: inline-flex;
+            align-items: center;
+        }
+        .print-btn:hover {
+            color: var(--ana-renk);
+        }
+
+        /* --- RESPONSIVE VE BASKI AYARLARI --- */
+        @media (max-width: 400px) {
+            .links-grid { grid-template-columns: 1fr; }
+        }
+
+        @media print {
+            body { background-color: #fff; align-items: flex-start; }
+            .container { box-shadow: none; border: none; width: 100%; max-width: 100%; padding: 20px 0; margin: 0; }
+            .link-card { border: 1px solid #ccc; page-break-inside: avoid; }
+            .print-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-wrapper">
+            <div class="logo-placeholder">
+                <img src="https://www.lookerday.com/LookerDay.png" alt="LookerDay Logo">
+            </div>
+        </div>
+
+        <h1>LookerDay'e Hoş Geldiniz!</h1>
+        <p class="description">
+            Daha planlı bir yaşam ve kesintisiz iletişim dünyasına adım atın. 
+            Uygulamalarımızı indirmek veya sosyal medyada bize katılmak için aşağıdan seçim yapın.
+        </p>
+
+        <div class="links-grid">
+            
+            <a href="https://instagram.com/looker_day" target="_blank" class="link-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/120px-Instagram_icon.png" alt="Instagram İkonu">
+                <span>Instagram</span>
+            </a>
+
+            <a href="https://linkedin.com/company/ŞİRKETADINIZ" target="_blank" class="link-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/120px-LinkedIn_logo_initials.png" alt="LinkedIn İkonu">
+                <span>LinkedIn</span>
+            </a>
+
+            <a href="https://apps.apple.com/app/ID-NUMARANIZ" target="_blank" class="link-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/120px-Apple_logo_black.svg.png" alt="App Store İkonu">
+                <span>App Store</span>
+            </a>
+
+            <a href="https://play.google.com/store/apps/details?id=com.eventnest" target="_blank" class="link-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Play_Arrow_logo.svg/120px-Google_Play_Arrow_logo.svg.png" alt="Google Play İkonu">
+                <span>Google Play</span>
+            </a>
+
+        </div>
+
+        <div class="footer">
+            <div class="support-link">
+                Destek talebiniz için: <a href="mailto:support@lookerday.com">support@lookerday.com</a>
+            </div>
+            © 2025 LookerDay. Tüm hakları saklıdır.
+            <br>
+        </div>
+    </div>
+
+</body>
+</html>
